@@ -11,11 +11,11 @@ b=np.array([1,2,3,4,5])
 ###############################################################
 #Jacobi 
 
-c_J=0							#To store the no.of iteration required
+c_J=0						#To store the no.of iteration required
 D=np.ones(5)					#Difference of true and approx. sol.
 x_old=np.zeros(5)				#Current iteration approx. sol.
 x_new=np.zeros(5)				#Next iteration approx. sol.
-while np.size(D[abs(D)>0.01])!=0:
+while np.size(D[abs(D)>0.01])!=0:		#Stop when every entry of difference < 0.01
     for i in range(5):
         Sum=0
         q=arr.array('i',range(5))
