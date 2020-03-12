@@ -21,14 +21,14 @@ W1=np.dot(np.transpose(A),A)
 W2=np.dot(A,np.transpose(A))
 
 E_V,V=np.linalg.eigh(W1)	#This is done to arrange the eigenvalues and corresponding 
-idx = E_V.argsort()[::-1]   	#eigenvectors in descending order.
-E_V = E_V[idx]
-V = V[:,idx]
+odr = E_V.argsort()[::-1]   	#eigenvectors in descending order.
+E_V = E_V[odr]
+V = V[:,odr]
 
 E_U,U=np.linalg.eigh(W2)	#Same thing over here
-idx = E_U.argsort()[::-1]   
-E_U = E_U[idx]
-U = U[:,idx]
+odr = E_U.argsort()[::-1]   
+E_U = E_U[odr]
+U = U[:,odr]
 
 S1=np.zeros(A.shape)		#Initialise an empty matrix of the same size as A 
 if (m>=n):
